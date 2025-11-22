@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Princess Day</title>
+<link rel="icon" type="image/png" href="./Pokemon-Jigglypuff-Wave-MDF-Die-Cut-Wall-Art.avif">
+<style>
+  /* Prevent scroll */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(120deg, #ffd6e8, #ffe9f4, #ffd1f2, #ffd6e8);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+  }
+
+  /* MOVING GRADIENT (A) */
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* FLOATING HEARTS (C) */
+  .heart {
+    position: absolute;
+    color: #ff88b8;
+    font-size: 18px;
+    opacity: 0.6;
+    animation: floatHearts 6s linear infinite;
+  }
+  @keyframes floatHearts {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+  }
+
+  /* SPARKLES (B) */
+  .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: sparkleFloat 4s infinite ease-in-out;
+  }
+  @keyframes sparkleFloat {
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(-80vh); opacity: 0; }
+  }
+
+  /* CURTAINS – slower gentle wave */
+  .curtain {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #ffb7d8;
+    z-index: 5;
+    animation: waveCurtains 9s ease-in-out infinite; /* slower */
+  }
+
+  .left { 
+    left: 0; 
+    border-right: 3px solid #ff8cb8; 
+  }
+
+  .right { 
+    right: 0; 
+    border-left: 3px solid #ff8cb8; 
+  }
+
+  @keyframes waveCurtains {
+    0% { width: 50%; }
+    25% { width: 0%; }
+    50% { width: 50%; }
+    75% { width: 25%; }
+    100% { width: 50%; }
+  }
+
+  /* MAIN CONTAINER */
+  .container {
+    position: relative;
+    z-index: 10;
+    max-width: 380px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 100, 160, 0.25),
+                  0 0 10px rgba(255, 150, 190, 0.35);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: #ff5fa8;
+    text-shadow: 0 0 10px #fff;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #7a3a58;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #ff8dc8;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255, 80, 160, 0.3);
+    transition: 0.3s;
+  }
+  .cta:hover {
+    background: #ff73ba;
+  }
+
+  @media (max-width: 768px)  {
+    .container{
+        max-width: 320px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+<div class="heart" style="left:20%; animation-delay:0s;">♥</div>
+<div class="heart" style="left:50%; animation-delay:1s; font-size:22px;">♥</div>
+<div class="heart" style="left:80%; animation-delay:2s;">♥</div>
+
+<!-- SPARKLES -->
+<div class="sparkle" style="left:30%; animation-delay:0s;"></div>
+<div class="sparkle" style="left:60%; animation-delay:1s;"></div>
+<div class="sparkle" style="left:85%; animation-delay:2s;"></div>
+
+<!-- CURTAINS -->
+<div class="curtain left"></div>
+<div class="curtain right"></div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <h1>💖 Happy Princess Day 💖</h1>
+  <p>I know it's been awhile, and probably you would not expect me to do this but i did it anyways cause you are a princess :)</p>
+  <a href="./princess-message.html" class="cta">Open Your Message 👑</a>
+</div>
+
+</body>
+</html>
